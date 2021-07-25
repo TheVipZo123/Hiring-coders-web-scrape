@@ -21,13 +21,17 @@
           <img src="images/logo.svg" alt="Bombaaacha" />
         </a>
 
-        
+        <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
 
         <div class="header__links hide-for-mobile">
           <a href="#">Home</a><a href="#">Sobre</a><a href="#">Contato</a><a href="#">Blog</a><a href="#">Careira</a>
         </div>
         
-          <a href="#" class="button header__cta hide-for-mobile">Registrar</a>
+          <a href="cadastro.html" class="button header__cta hide-for-mobile">Cadastro</a>
         
         
         
@@ -53,7 +57,7 @@
         
         <div class="hero__text container--pall">
           <h1>
-            Procurou? ..... Achou? Pumba! Pimba e Pumba!
+            Procurou?  Achou? Pumba! Pimba e Pumba!
           </h1>
           <p>
             Bombaacha! é o rei das navegações pela internet. 
@@ -246,9 +250,10 @@
     
   </div>
  <!--
-
+ <script type="module" src="webscrape/crawler.js"></script> 
  -->
 
+ 
  <script type="text/javascript">
   const inpkey1 = document.getElementById(inpkey);
   const inpvalue1 = document.getElementById(inpvalue);
@@ -269,10 +274,12 @@
   btninsert2.onclick = function()
   {
     const value1 = inpvalue.value;
+    var value2 = "";
   
   if (value1){
     localStorage.setItem("Produto", value1);
     location.reload();
+    value2 = localStorage.getItem("Produto");
   }
   
 }; 
